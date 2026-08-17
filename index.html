@@ -387,10 +387,10 @@
   .gfilter[aria-pressed="true"]{background:var(--green-deep); border-color:var(--green-deep); color:#fff;}
   .gfilter:hover{border-color:var(--green-deep); color:var(--green-deep);}
   .gfilter[aria-pressed="true"]:hover{color:#fff;}
-  .gmasonry{columns:3 260px; column-gap:14px;}
-  .gmasonry figure{break-inside:avoid; margin-bottom:14px; cursor:pointer; overflow:hidden; border-radius:2px; position:relative;}
+  .gmasonry{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  .gmasonry figure{cursor:pointer; overflow:hidden; border-radius:2px; position:relative; aspect-ratio:16/9; margin:0;}
   .gmasonry figure.hidden{display:none;}
-  .gmasonry figure img{width:100%; display:block; transition:transform 0.6s ease;}
+  .gmasonry figure img{width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.6s ease;}
   .gmasonry figure:hover img{transform:scale(1.045);}
   .gmasonry figure figcaption{position:absolute; left:14px; bottom:12px; right:14px; color:#fff; font-family:'IBM Plex Mono'; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; opacity:0; transition:opacity 0.3s ease;}
   .gmasonry figure::after{content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(0,0,0,0.55), transparent 45%); opacity:0; transition:opacity 0.3s ease;}
@@ -402,7 +402,7 @@
   .lightbox-close{top:24px; right:24px;}
   .lightbox-prev{left:24px; top:50%; transform:translateY(-50%);}
   .lightbox-next{right:24px; top:50%; transform:translateY(-50%);}
-  @media(max-width:700px){.gmasonry{columns:2 160px;} .lightbox-prev, .lightbox-next{display:none;}}
+  @media(max-width:700px){.gmasonry{grid-template-columns:repeat(2,1fr); gap:10px;} .lightbox-prev, .lightbox-next{display:none;}}
 
   /* ===== MEMORIES ===== */
   .memories-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px;}
@@ -536,7 +536,7 @@
 <!-- ================= HERO ================= -->
 <header class="hero" id="home">
   <div class="hero-media kenburns" aria-hidden="true">
-    <img src="https://www.susesihotel.com/media/ne5hikm2/susesi-luxury-resort-mainpage-banner-desktop.jpg" alt="" loading="eager" decoding="async">
+    <img src="susesi-luxury-resort-mainpage-banner-desktop.jpg" alt="" loading="eager" decoding="async">
   </div>
   <div class="hero-content">
     <p class="eyebrow on-dark">Belek · Antalya · Mediterranean</p>
@@ -602,7 +602,7 @@
 <!-- ================= THE LOOK — TEASER ================= -->
 <section class="look-teaser reveal">
   <div class="wrap look-teaser-inner">
-    <div class="look-teaser-photo photo zoomhover"><img src="https://www.susesihotel.com/media/eahlvyus/susesi-hotels-gallery-gastronomy-turquoise-1.jpg" alt="Table setting styled in ivory, sand and turquoise for the wedding weekend" loading="lazy" decoding="async"></div>
+    <div class="look-teaser-photo photo zoomhover"><img src="susesi-hotels-gallery-gastronomy-turquoise-1.jpg" alt="Table setting styled in ivory, sand and turquoise for the wedding weekend" loading="lazy" decoding="async"></div>
     <div class="look-teaser-copy">
       <span class="shell-mark" aria-hidden="true"><svg viewBox="0 0 34 20" fill="none"><path d="M17 18c-6-2-9-8-9-13 0 5 4 9 9 10 5-1 9-5 9-10 0 5-3 11-9 13Z" stroke="#B6935A" stroke-width="1.3"/></svg></span>
       <span class="eyebrow" style="margin-top:14px; display:block;">The Celebration</span>
@@ -617,10 +617,10 @@
 <section id="destination" class="reveal">
   <div class="wrap dest">
     <div class="dest-photo-wrap">
-      <div class="dest-photo photo zoomhover"><img src="https://www.susesihotel.com/media/y1io5hja/susesi-hotels-gallery-general-view-3.jpg" alt="Coastal view of Belek, Antalya, along the Turkish Mediterranean" loading="lazy" decoding="async"></div>
+      <div class="dest-photo photo zoomhover"><img src="susesi-hotels-gallery-general-view-3.jpg" alt="Coastal view of Belek, Antalya, along the Turkish Mediterranean" loading="lazy" decoding="async"></div>
       <div class="dest-strip">
-        <div class="photo zoomhover"><img src="https://www.susesihotel.com/media/0j0hz31p/susesi-hotels-gallery-beach-and-pools-1.jpg" alt="Turquoise Mediterranean water along the Belek shoreline" loading="lazy" decoding="async"></div>
-        <div class="photo zoomhover"><img src="https://www.susesihotel.com/media/k41bkym4/susesi-hotels-gallery-general-view-5.jpg" alt="Pine-fringed sand along the Belek coast" loading="lazy" decoding="async"></div>
+        <div class="photo zoomhover"><img src="susesi-hotels-gallery-beach-and-pools-1.jpg" alt="Turquoise Mediterranean water along the Belek shoreline" loading="lazy" decoding="async"></div>
+        <div class="photo zoomhover"><img src="susesi-hotels-gallery-general-view-5.jpg" alt="Pine-fringed sand along the Belek coast" loading="lazy" decoding="async"></div>
       </div>
     </div>
     <div class="dest-copy">
@@ -635,7 +635,7 @@
 <!-- ================= CINEMATIC 1 ================= -->
 <section class="cinematic reveal grain">
   <div class="cinematic-media" aria-hidden="true">
-    <img src="https://www.susesihotel.com/media/klsdxbxf/susesi-luxury-resort-mainpage-banner-desktop-2.jpg" alt="" loading="lazy" decoding="async">
+    <img src="susesi-luxury-resort-mainpage-banner-desktop-2.jpg" alt="" loading="lazy" decoding="async">
   </div>
   <div class="cinematic-content">
     <span class="eyebrow on-dark">A moment</span>
@@ -696,7 +696,7 @@
 <section id="resort" class="reveal">
   <div class="wrap">
     <div class="resort-hero">
-      <div class="resort-photo photo zoomhover"><img src="https://www.susesihotel.com/media/cptjg4ar/susesi-luxury-resort-mainpage-banner-desktop-5.jpg" alt="Susesi Luxury Resort beachfront in Belek, Antalya" loading="lazy" decoding="async"></div>
+      <div class="resort-photo photo zoomhover"><img src="susesi-luxury-resort-mainpage-banner-desktop-5.jpg" alt="Susesi Luxury Resort beachfront in Belek, Antalya" loading="lazy" decoding="async"></div>
       <div class="resort-copy">
         <span class="eyebrow on-dark">Where We'll Stay</span>
         <h2>Susesi Luxury Resort</h2>
@@ -727,13 +727,13 @@
     </div>
 
     <div class="rgallery" aria-hidden="false">
-      <figure class="photo zoomhover"><img src="https://www.susesihotel.com/media/u2ld04qh/susesi-hotels-gallery-general-view-2.jpg" alt="Susesi Luxury Resort grounds and architecture" loading="lazy" decoding="async"></figure>
-      <figure class="photo zoomhover"><img src="https://www.susesihotel.com/media/t0ip3xn3/susesi-hotels-gallery-beach-and-pools-3.jpg" alt="Pool and gardens at Susesi Luxury Resort" loading="lazy" decoding="async"></figure>
-      <figure class="photo zoomhover"><img src="https://www.susesihotel.com/media/zv1dtioz/susesi-hotels-gallery-rooms-royal-suite.jpg" alt="A suite at Susesi Luxury Resort" loading="lazy" decoding="async"></figure>
-      <figure class="photo zoomhover"><img src="https://www.susesihotel.com/media/bzsdlapa/susesi-hotels-gallery-general-view-4.jpg" alt="Susesi Luxury Resort beachfront" loading="lazy" decoding="async"></figure>
-      <figure class="photo zoomhover"><img src="https://www.susesihotel.com/media/jmud2dyp/susesi-hotels-gallery-la-calisse-spa-1.jpg" alt="La Calisse Spa at Susesi Luxury Resort" loading="lazy" decoding="async"></figure>
-      <figure class="photo zoomhover"><img src="https://www.susesihotel.com/media/hr3eifu5/susesi-hotels-gallery-lobby-1.jpg" alt="Lobby at Susesi Luxury Resort" loading="lazy" decoding="async"></figure>
-      <figure class="photo zoomhover"><img src="https://www.susesihotel.com/media/eahlvyus/susesi-hotels-gallery-gastronomy-turquoise-1.jpg" alt="Evening dining at Susesi Luxury Resort" loading="lazy" decoding="async"></figure>
+      <figure class="photo zoomhover"><img src="susesi-hotels-gallery-general-view-2.jpg" alt="Susesi Luxury Resort grounds and architecture" loading="lazy" decoding="async"></figure>
+      <figure class="photo zoomhover"><img src="susesi-hotels-gallery-beach-and-pools-3.jpg" alt="Pool and gardens at Susesi Luxury Resort" loading="lazy" decoding="async"></figure>
+      <figure class="photo zoomhover"><img src="susesi-hotels-gallery-rooms-royal-suite.jpg" alt="A suite at Susesi Luxury Resort" loading="lazy" decoding="async"></figure>
+      <figure class="photo zoomhover"><img src="susesi-hotels-gallery-general-view-4.jpg" alt="Susesi Luxury Resort beachfront" loading="lazy" decoding="async"></figure>
+      <figure class="photo zoomhover"><img src="susesi-hotels-gallery-la-calisse-spa-1.jpg" alt="La Calisse Spa at Susesi Luxury Resort" loading="lazy" decoding="async"></figure>
+      <figure class="photo zoomhover"><img src="susesi-hotels-gallery-lobby-1.jpg" alt="Lobby at Susesi Luxury Resort" loading="lazy" decoding="async"></figure>
+      <figure class="photo zoomhover"><img src="susesi-hotels-gallery-gastronomy-turquoise-1.jpg" alt="Evening dining at Susesi Luxury Resort" loading="lazy" decoding="async"></figure>
     </div>
   </div>
 </section>
@@ -741,7 +741,7 @@
 <!-- ================= CINEMATIC 2 ================= -->
 <section class="cinematic reveal grain">
   <div class="cinematic-media" aria-hidden="true">
-    <img src="https://www.susesihotel.com/media/15umq25e/susesi-luxury-resort-mainpage-banner-desktop-3.jpg" alt="" loading="lazy" decoding="async">
+    <img src="susesi-luxury-resort-mainpage-banner-desktop-3.jpg" alt="" loading="lazy" decoding="async">
   </div>
   <div class="cinematic-content">
     <span class="eyebrow on-dark">Golden hour</span>
@@ -798,7 +798,7 @@
 <section id="wedding-day" class="wday reveal">
   <div class="wrap">
     <div class="wday-media photo">
-      <img src="https://www.susesihotel.com/media/wbzdqvbk/susesi-hotels-gallery-beach-and-pools-7.jpg" alt="Beachfront at Susesi Luxury Resort at golden hour" loading="lazy" decoding="async">
+      <img src="susesi-hotels-gallery-beach-and-pools-7.jpg" alt="Beachfront at Susesi Luxury Resort at golden hour" loading="lazy" decoding="async">
     </div>
     <div class="section-head">
       <span class="eyebrow">18 October</span>
@@ -863,35 +863,35 @@
     <!-- editorial moodboard -->
     <div class="look-grid">
       <div class="lk-item lk-1">
-        <div class="lk-figure"><img src="https://www.susesihotel.com/media/0j0hz31p/susesi-hotels-gallery-beach-and-pools-1.jpg" alt="Turquoise water meeting warm sand, the ceremony backdrop" loading="lazy" decoding="async"></div>
+        <div class="lk-figure"><img src="susesi-hotels-gallery-beach-and-pools-1.jpg" alt="Turquoise water meeting warm sand, the ceremony backdrop" loading="lazy" decoding="async"></div>
         <div class="lk-cap"><div class="lk-label">The Ceremony</div><p>An elegant beach setup with minimal florals and natural textures, the sea itself as the backdrop.</p></div>
       </div>
       <div class="lk-item lk-2">
-        <div class="lk-figure"><img src="https://www.susesihotel.com/media/jyknkowo/susesi-hotels-gallery-gastronomy-turquoise.jpg" alt="Elegant table setting in ivory and turquoise tones" loading="lazy" decoding="async"></div>
+        <div class="lk-figure"><img src="susesi-hotels-gallery-gastronomy-turquoise.jpg" alt="Elegant table setting in ivory and turquoise tones" loading="lazy" decoding="async"></div>
         <div class="lk-cap"><div class="lk-label">The Tablescape</div><p>Ivory linen, sophisticated glassware and candlelight, with restrained turquoise accents.</p></div>
       </div>
       <div class="lk-item lk-3">
-        <div class="lk-figure"><img src="https://www.susesihotel.com/media/ltipih4q/susesi-hotels-gallery-general-view-6.jpg" alt="Natural gardens and greenery at the resort" loading="lazy" decoding="async"></div>
+        <div class="lk-figure"><img src="susesi-hotels-gallery-general-view-6.jpg" alt="Natural gardens and greenery at the resort" loading="lazy" decoding="async"></div>
         <div class="lk-cap"><div class="lk-label">The Flowers</div><p>Ivory, cream and soft green — natural foliage over anything that reads as a generic bouquet.</p></div>
       </div>
       <div class="lk-item lk-4">
-        <div class="lk-figure"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Unknown%20Sand%20dollar%201%20Macro.JPG" alt="Macro detail of natural shell texture" loading="lazy" decoding="async"></div>
+        <div class="lk-figure"><img src="Unknown-Sand-dollar-1-Macro.jpg" alt="Macro detail of natural shell texture" loading="lazy" decoding="async"></div>
         <div class="lk-cap"><div class="lk-label">Texture</div><p>Sea glass, driftwood and stone — the tactile materials behind every surface.</p></div>
       </div>
       <div class="lk-item lk-5">
-        <div class="lk-figure"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Different%20types%20of%20shells.jpg" alt="Small natural seashells" loading="lazy" decoding="async"></div>
+        <div class="lk-figure"><img src="Different-types-of-shells.jpg" alt="Small natural seashells" loading="lazy" decoding="async"></div>
         <div class="lk-cap"><div class="lk-label">Shells</div><p>Small natural details inspired by the shoreline, used sparingly near headings and place cards.</p></div>
       </div>
       <div class="lk-item lk-6">
-        <div class="lk-figure"><img src="https://www.susesihotel.com/media/jx3eabul/susesi-hotels-gallery-beach-and-pools-8.jpg" alt="Golden hour light over the beach" loading="lazy" decoding="async"></div>
+        <div class="lk-figure"><img src="susesi-hotels-gallery-beach-and-pools-8.jpg" alt="Golden hour light over the beach" loading="lazy" decoding="async"></div>
         <div class="lk-cap"><div class="lk-label">Golden Hour</div><p>The moment the palette comes alive — daylight softening into candlelight by 19:30.</p></div>
       </div>
       <div class="lk-item lk-7">
-        <div class="lk-figure"><img src="https://www.susesihotel.com/media/bs0gkskg/susesi-hotels-gallery-beach-and-pools-2.jpg" alt="The turquoise Mediterranean sea and shoreline" loading="lazy" decoding="async"></div>
+        <div class="lk-figure"><img src="susesi-hotels-gallery-beach-and-pools-2.jpg" alt="The turquoise Mediterranean sea and shoreline" loading="lazy" decoding="async"></div>
         <div class="lk-cap"><div class="lk-label">The Beach</div><p>Sand, sea and shell become part of the design itself, not a backdrop to it.</p></div>
       </div>
       <div class="lk-item lk-8">
-        <div class="lk-figure"><img src="https://www.susesihotel.com/media/eahlvyus/susesi-hotels-gallery-gastronomy-turquoise-1.jpg" alt="Warm evening lighting for the wedding dinner" loading="lazy" decoding="async"></div>
+        <div class="lk-figure"><img src="susesi-hotels-gallery-gastronomy-turquoise-1.jpg" alt="Warm evening lighting for the wedding dinner" loading="lazy" decoding="async"></div>
         <div class="lk-cap"><div class="lk-label">The Evening</div><p>Candles, warm ambient light and the sea at night — a quieter, more intimate register.</p></div>
       </div>
     </div>
@@ -933,18 +933,18 @@
     </div>
 
     <div class="gmasonry" id="gmasonry">
-      <figure data-category="resort" style="aspect-ratio:4/5;" data-caption="Susesi Luxury Resort" tabindex="0" role="button" aria-label="Open photo: Susesi Luxury Resort"><img src="https://www.susesihotel.com/media/s3vep43r/susesi-hotels-gallery-general-view.jpg" alt="Susesi Luxury Resort general view" loading="lazy" decoding="async"><figcaption>Susesi Luxury Resort</figcaption></figure>
-      <figure data-category="beach" style="aspect-ratio:1/1;" data-caption="The beach, Belek" tabindex="0" role="button" aria-label="Open photo: The beach, Belek"><img src="https://www.susesihotel.com/media/0j0hz31p/susesi-hotels-gallery-beach-and-pools-1.jpg" alt="Beach at Susesi Luxury Resort, Belek" loading="lazy" decoding="async"><figcaption>The beach, Belek</figcaption></figure>
-      <figure data-category="belek" style="aspect-ratio:3/4;" data-caption="Resort grounds" tabindex="0" role="button" aria-label="Open photo: Resort grounds"><img src="https://www.susesihotel.com/media/ltipih4q/susesi-hotels-gallery-general-view-6.jpg" alt="Susesi Luxury Resort grounds in Belek" loading="lazy" decoding="async"><figcaption>Resort grounds</figcaption></figure>
-      <figure data-category="golden" style="aspect-ratio:4/3;" data-caption="Golden hour" tabindex="0" role="button" aria-label="Open photo: Golden hour"><img src="https://www.susesihotel.com/media/jx3eabul/susesi-hotels-gallery-beach-and-pools-8.jpg" alt="Golden hour over the beach at Susesi Luxury Resort" loading="lazy" decoding="async"><figcaption>Golden hour</figcaption></figure>
-      <figure data-category="wedding" style="aspect-ratio:1/1;" data-caption="Evening, terrace" tabindex="0" role="button" aria-label="Open photo: Evening, terrace"><img src="https://www.susesihotel.com/media/jyknkowo/susesi-hotels-gallery-gastronomy-turquoise.jpg" alt="Elegant evening dining at Susesi Luxury Resort" loading="lazy" decoding="async"><figcaption>Evening, terrace</figcaption></figure>
-      <figure data-category="sea" style="aspect-ratio:4/5;" data-caption="The sea, Belek" tabindex="0" role="button" aria-label="Open photo: The sea, Belek"><img src="https://www.susesihotel.com/media/bs0gkskg/susesi-hotels-gallery-beach-and-pools-2.jpg" alt="Turquoise sea along the Belek coast" loading="lazy" decoding="async"><figcaption>The sea, Belek</figcaption></figure>
-      <figure data-category="belek" style="aspect-ratio:3/4;" data-caption="Morning, the bay" tabindex="0" role="button" aria-label="Open photo: Morning, the bay"><img src="https://www.susesihotel.com/media/c4wpubjl/susesi-hotels-gallery-general-view-7.jpg" alt="Morning view of the Belek coastline" loading="lazy" decoding="async"><figcaption>Morning, the bay</figcaption></figure>
-      <figure data-category="resort" style="aspect-ratio:4/3;" data-caption="Lobby &amp; grounds" tabindex="0" role="button" aria-label="Open photo: Lobby and grounds"><img src="https://www.susesihotel.com/media/j0skl02a/susesi-hotels-gallery-lobby.jpg" alt="Lobby at Susesi Luxury Resort" loading="lazy" decoding="async"><figcaption>Lobby &amp; grounds</figcaption></figure>
-      <figure data-category="sea" style="aspect-ratio:1/1;" data-caption="Sand and light" tabindex="0" role="button" aria-label="Open photo: Sand and light"><img src="https://www.susesihotel.com/media/cvqe5plf/susesi-hotels-gallery-beach-and-pools-4.jpg" alt="Sand and light along the Belek shore" loading="lazy" decoding="async"><figcaption>Sand and light</figcaption></figure>
-      <figure data-category="golden" style="aspect-ratio:4/5;" data-caption="Sunset, resort beach" tabindex="0" role="button" aria-label="Open photo: Sunset, resort beach"><img src="https://www.susesihotel.com/media/15umq25e/susesi-luxury-resort-mainpage-banner-desktop-3.jpg" alt="Sunset over the resort beach at Susesi" loading="lazy" decoding="async"><figcaption>Sunset, resort beach</figcaption></figure>
-      <figure data-category="beach" style="aspect-ratio:3/4;" data-caption="Beach and pools" tabindex="0" role="button" aria-label="Open photo: Beach and pools"><img src="https://www.susesihotel.com/media/vxepcp03/susesi-hotels-gallery-beach-and-pools-9.jpg" alt="Beach and pools at Susesi Luxury Resort" loading="lazy" decoding="async"><figcaption>Beach and pools</figcaption></figure>
-      <figure data-category="wedding" style="aspect-ratio:4/3;" data-caption="Candlelit dinner" tabindex="0" role="button" aria-label="Open photo: Candlelit dinner"><img src="https://www.susesihotel.com/media/1qfn21lq/susesi-hotels-gallery-gastronomy-ada-a-la-carte.jpg" alt="Candlelit dinner setting at Susesi Luxury Resort" loading="lazy" decoding="async"><figcaption>Candlelit dinner</figcaption></figure>
+      <figure data-category="resort" data-caption="Susesi Luxury Resort" tabindex="0" role="button" aria-label="Open photo: Susesi Luxury Resort"><img src="susesi-hotels-gallery-general-view.jpg" alt="Susesi Luxury Resort general view" loading="lazy" decoding="async"><figcaption>Susesi Luxury Resort</figcaption></figure>
+      <figure data-category="beach" data-caption="The beach, Belek" tabindex="0" role="button" aria-label="Open photo: The beach, Belek"><img src="susesi-hotels-gallery-beach-and-pools-1.jpg" alt="Beach at Susesi Luxury Resort, Belek" loading="lazy" decoding="async"><figcaption>The beach, Belek</figcaption></figure>
+      <figure data-category="belek" data-caption="Resort grounds" tabindex="0" role="button" aria-label="Open photo: Resort grounds"><img src="susesi-hotels-gallery-general-view-6.jpg" alt="Susesi Luxury Resort grounds in Belek" loading="lazy" decoding="async"><figcaption>Resort grounds</figcaption></figure>
+      <figure data-category="golden" data-caption="Golden hour" tabindex="0" role="button" aria-label="Open photo: Golden hour"><img src="susesi-hotels-gallery-beach-and-pools-8.jpg" alt="Golden hour over the beach at Susesi Luxury Resort" loading="lazy" decoding="async"><figcaption>Golden hour</figcaption></figure>
+      <figure data-category="wedding" data-caption="Evening, terrace" tabindex="0" role="button" aria-label="Open photo: Evening, terrace"><img src="susesi-hotels-gallery-gastronomy-turquoise.jpg" alt="Elegant evening dining at Susesi Luxury Resort" loading="lazy" decoding="async"><figcaption>Evening, terrace</figcaption></figure>
+      <figure data-category="sea" data-caption="The sea, Belek" tabindex="0" role="button" aria-label="Open photo: The sea, Belek"><img src="susesi-hotels-gallery-beach-and-pools-2.jpg" alt="Turquoise sea along the Belek coast" loading="lazy" decoding="async"><figcaption>The sea, Belek</figcaption></figure>
+      <figure data-category="belek" data-caption="Morning, the bay" tabindex="0" role="button" aria-label="Open photo: Morning, the bay"><img src="susesi-hotels-gallery-general-view-7.jpg" alt="Morning view of the Belek coastline" loading="lazy" decoding="async"><figcaption>Morning, the bay</figcaption></figure>
+      <figure data-category="resort" data-caption="Lobby &amp; grounds" tabindex="0" role="button" aria-label="Open photo: Lobby and grounds"><img src="susesi-hotels-gallery-lobby.jpg" alt="Lobby at Susesi Luxury Resort" loading="lazy" decoding="async"><figcaption>Lobby &amp; grounds</figcaption></figure>
+      <figure data-category="sea" data-caption="Sand and light" tabindex="0" role="button" aria-label="Open photo: Sand and light"><img src="susesi-hotels-gallery-beach-and-pools-4.jpg" alt="Sand and light along the Belek shore" loading="lazy" decoding="async"><figcaption>Sand and light</figcaption></figure>
+      <figure data-category="golden" data-caption="Sunset, resort beach" tabindex="0" role="button" aria-label="Open photo: Sunset, resort beach"><img src="susesi-luxury-resort-mainpage-banner-desktop-3.jpg" alt="Sunset over the resort beach at Susesi" loading="lazy" decoding="async"><figcaption>Sunset, resort beach</figcaption></figure>
+      <figure data-category="beach" data-caption="Beach and pools" tabindex="0" role="button" aria-label="Open photo: Beach and pools"><img src="susesi-hotels-gallery-beach-and-pools-9.jpg" alt="Beach and pools at Susesi Luxury Resort" loading="lazy" decoding="async"><figcaption>Beach and pools</figcaption></figure>
+      <figure data-category="wedding" data-caption="Candlelit dinner" tabindex="0" role="button" aria-label="Open photo: Candlelit dinner"><img src="susesi-hotels-gallery-gastronomy-ada-a-la-carte.jpg" alt="Candlelit dinner setting at Susesi Luxury Resort" loading="lazy" decoding="async"><figcaption>Candlelit dinner</figcaption></figure>
     </div>
   </div>
 </section>
@@ -1125,7 +1125,7 @@
 <!-- ================= FINAL CTA ================= -->
 <section class="final-cta reveal grain">
   <div class="final-cta-media" aria-hidden="true">
-    <img src="https://www.susesihotel.com/media/0wbfo3bu/susesi-luxury-resort-mainpage-banner-desktop-4.jpg" alt="" loading="lazy" decoding="async">
+    <img src="susesi-luxury-resort-mainpage-banner-desktop-4.jpg" alt="" loading="lazy" decoding="async">
   </div>
   <div class="wrap">
     <span class="eyebrow on-dark" style="justify-content:center; display:flex;">Belek · 16—19 October 2026</span>
